@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr" class="spectrum spectrum--medium spectrum--lightest">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>CSS Modules | Magento PWA Documentation</title>
+	<meta name="description" content="Everything you need to build a Magento PWA.">
+
+	<link rel="stylesheet" href="https://use.typekit.net/iaw1apr.css">
+	<link rel="stylesheet" href="/pwa-studio/assets/css/app.css?ver=9" />
+	<link rel="stylesheet" href="/pwa-studio/assets/css/print.css?ver=9" media="print"/>
+
+	<link rel="stylesheet" href="/pwa-studio/builds/css/main.css" />
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script>
+  var baseUrl = "/pwa-studio";
+  var algolia = {
+    id : "E642SEDTHL",
+    index: "pwa-devdocs",
+    key: "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+
+  var indices = [
+    {
+      label: "PWA",
+      name: "pwa-devdocs",
+      baseUrl: "https://pwastudio.io"
+    },
+    {
+      label: "DevDocs",
+      name: "devdocs",
+      facets: [["guide_version: 2.3", "versionless: true"]],
+      refinements: [
+        {
+          label: "Functional areas",
+          attribute: "functional_areas"
+        }
+      ],
+      baseUrl: "https://devdocs.magento.com"
+    },
+    {
+      label: "Commerce User Guide",
+      name: "merchdocs",
+      baseUrl: "https://docs.magento.com/user-guide"
+    },
+    {
+      label: "MBI User Guide",
+      name: "merchdocs-mbi",
+      baseUrl: "https://docs.magento.com/mbi"
+    },
+    {
+      label: "Order Management",
+      name: "oms-en",
+      baseUrl: "https://omsdocs.magento.com"
+    }
+  ];
+</script>
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KRCLXBB');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" data-proofer-ignore href="/pwa-studio/">
+      <img class="logo-image" src="/pwa-studio/assets/i/adobe-a.svg" alt="Adobe">
+      <span class="logo-text">Magento</span>
+      <span class="site-logo">PWA Docs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      <!-- Main Navigation -->
+<ul class="nav-main spectrum-Tabs spectrum-Tabs--horizontal" role="menubar">
+
+  
+  <li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Getting Started</span>
+    <div class="nav-popup spectrum-Popover">
+      <ul class="spectrum-Menu">
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/overview/">Overview</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/frequently-asked-questions/">Frequently Asked Questions</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/storefront-architecture/">Storefront architecture</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/basic-concepts/">Basic concepts</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/pwa-buildpack/">PWA Buildpack</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/peregrine/">Peregrine</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/venia-pwa-concept/">Venia storefront concept</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/upward/">UPWARD</a>
+        </li> 
+        
+      </ul>
+    </div>
+  </li>
+
+  
+
+  
+  <li class="menuitem spectrum-Tabs-item is-selected">
+    <a class="spectrum-Tabs-itemLabel" href="/pwa-studio/tutorials/">Tutorials</a>
+  </li>
+  
+
+  
+  <li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Reference API</span>
+    <div class="nav-popup spectrum-Popover">
+      <ul class="spectrum-Menu">
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/pwa-buildpack/reference/buildpack-cli/">PWA Buildpack</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/peregrine/reference/item/">Peregrine API</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/venia-ui/reference/components/Button/">Venia UI API</a>
+        </li> 
+        
+      </ul>
+    </div>
+  </li>
+
+  
+
+  
+  <li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Integrations</span>
+    <div class="nav-popup spectrum-Popover">
+      <ul class="spectrum-Menu">
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/pagebuilder/">Page Builder</a>
+        </li> 
+        
+      </ul>
+    </div>
+  </li>
+
+  
+
+</ul>
+
+    </div>
+
+    <div class="nav-actions">
+        
+        
+
+
+        
+<div class="app-switcher">
+  <div class="dropdown">
+    <button id="app-switcher-trigger" class="app-switcher-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Documentation sites"></button>
+    <div class="dropdown-menu spectrum-Popover spectrum-Dropdown-popover spectrum-Popover--bottom dropdown-menu-right" aria-labelledby="app-switcher-trigger" role="menu">
+      <div class="app-switcher-content">
+      
+      <div class="app-switcher-group">
+        <span class="spectrum-Menu-sectionHeading" id="app-switcher-category-1">Developer</span>
+        <ul class="spectrum-Menu" role="group" aria-labelledby="app-switcher-category-1">
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://devdocs.magento.com/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce Developer Documentation">Commerce Developer Documentation</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="http://pwastudio.io/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=PWA Studio">PWA Studio</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://omsdocs.magento.com/en/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        </ul>
+      </div>
+      
+      <div class="app-switcher-group">
+        <span class="spectrum-Menu-sectionHeading" id="app-switcher-category-2">Merchant</span>
+        <ul class="spectrum-Menu" role="group" aria-labelledby="app-switcher-category-2">
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://docs.magento.com/user-guide/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce User Guide">Commerce User Guide</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://omsdocs.magento.com/en/userguides/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://docs.magento.com/mbi/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Business Intelligence">Business Intelligence</a></li>
+        
+        </ul>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="search-btn">
+          <button class="search-trigger" aria-label="Search">
+            <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Edit">
+              <use xlink:href="#spectrum-css-icon-Magnifier" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="quick-search">
+          <form
+  class="spectrum-Search search-form"
+  action="/pwa-studio/search/"
+>
+  <input
+    type="search"
+    placeholder="Looking for something specific?"
+    name="query"
+    value=""
+    class="spectrum-Textfield-input spectrum-Search-input search-field form-control"
+    autocomplete="off"
+  />
+  <svg
+    class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon"
+    focusable="false"
+    aria-hidden="true"
+  >
+    <use xlink:href="#spectrum-css-icon-Magnifier" />
+  </svg>
+  <button type="reset" class="search-clear spectrum-ClearButton spectrum-SearchClearButton">
+    <svg
+      class="spectrum-Icon spectrum-UIIcon-CrossSmall"
+      focusable="false"
+      aria-hidden="true"
+    >
+      <use xlink:href="#spectrum-css-icon-CrossSmall" />
+    </svg>
+  </button>
+</form>
+
+        </div>
+
+    </div>
+
+  </div>
+</nav><!-- .site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+    <button class="toc-toggler">Table of Contents</button>
+    <div class="sidebar-wrapper">
+
+      
+
+
+
+
+
+
+<div class="menu-section">
+    <div class="toc-entry">
+        <h4 class="guide-title">Tutorials</h4>
+    </div>
+
+    <ul class="table-of-contents spectrum-SideNav spectrum-SideNav--multiLevel" >
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/" class="spectrum-SideNav-itemLink  ">Overview</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/cloud-deploy/" class="spectrum-SideNav-itemLink  ">Magento Cloud deployment</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <span class="spectrum-SideNav-heading">Hello UPWARD</span>
+            
+
+            
+            <ul class="spectrum-SideNav">
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/hello-upward/simple-server/" class="spectrum-SideNav-itemLink  ">Creating a simple server</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/hello-upward/using-template-resolver/" class="spectrum-SideNav-itemLink  ">Using the TemplateResolver</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/hello-upward/adding-react/" class="spectrum-SideNav-itemLink  ">Adding React</a>
+                    
+                </li>
+            
+            </ul>
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/create-taglist-component/" class="spectrum-SideNav-itemLink  ">Create a TagList component</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/enable-sass-less-support/" class="spectrum-SideNav-itemLink  ">Enable SASS or LESS support</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/" class="spectrum-SideNav-itemLink  parent">PWA Studio fundamentals</a>
+            
+
+            
+            <ul class="spectrum-SideNav">
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/project-setup/" class="spectrum-SideNav-itemLink  ">Project setup</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/project-structure/" class="spectrum-SideNav-itemLink  ">Project structure</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/add-a-static-route/" class="spectrum-SideNav-itemLink  ">Add a static route</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/modify-site-footer/" class="spectrum-SideNav-itemLink  ">Modify the site footer</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/using-component-props/" class="spectrum-SideNav-itemLink  ">Using component props</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item is-selected">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/css-modules/" class="spectrum-SideNav-itemLink  ">CSS modules</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/manage-state/" class="spectrum-SideNav-itemLink  ">Manage state</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/work-with-graphql/" class="spectrum-SideNav-itemLink  ">Work with GraphQL</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/production-launch-checklist/" class="spectrum-SideNav-itemLink  ">Production launch checklist</a>
+                    
+                </li>
+            
+            </ul>
+            
+        </li>
+    
+    </ul>
+</div>
+
+
+
+    </div>
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<header class="content-header">
+				<!-- page-header -->
+<section class="page-intro">
+	
+	<h1 class="page-title">CSS Modules</h1>
+
+	
+	
+	<div class="github-links spectrum-ButtonGroup"><div class="github-link">
+    <a class="improve-page spectrum-ActionButton spectrum-ActionButton--quiet" href="https://github.com/magento/pwa-studio/tree/develop/pwa-devdocs/src/tutorials/pwa-studio-fundamentals/css-modules/index.md" target="_blank">
+      <img class="spectrum-Icon spectrum-Icon--sizeS" src="/pwa-studio/assets/i/icons/edit.svg" alt="" />
+      <span class="spectrum-ActionButton-label">Edit on GitHub</span> 
+    </a>
+  </div><div class="new-issue">
+    <a class="spectrum-ActionButton spectrum-ActionButton--quiet" href="https://github.com/magento/pwa-studio/issues/new?title=Feedback on page: /tutorials/pwa-studio-fundamentals/css-modules/" target="_blank">
+      <img class="spectrum-Icon spectrum-Icon--sizeS"  src="/pwa-studio/assets/i/icons/bug.svg" alt="" />
+      <span class="spectrum-ActionButton-label">Log an Issue</span>
+    </a>
+  </div></div>
+
+
+  
+
+
+
+ 
+
+  
+
+</section>
+
+			</header>
+			<main>
+				<p>If you used the scaffolding tool to set up your PWA Studio storefront project, then <a href="/pwa-studio/technologies/basic-concepts/css-modules/">CSS Modules</a> are supported out of the box without additional configuration.</p>
+
+<p>This tutorial provides some guidance on using CSS modules in your components.
+If you require more in depth information on CSS modules, see the <a href="/pwa-studio/technologies/basic-concepts/css-modules/">CSS Modules</a> topic or <a href="https://github.com/css-modules/css-modules">specification repository</a>.</p>
+
+<h2 id="defining-and-using-css-modules">Defining and using CSS modules</h2>
+
+<p>CSS modules are CSS files which are imported and treated as JavaScript modules.</p>
+
+<p>The recommended naming convention for classes is camelCase naming because it looks cleaner when paired with dot notation(e.g. <code class="highlighter-rouge">style.className</code>).
+Kebab-case naming can produce unexpected behavior when accessing the class name using dot notation.
+Use bracket notation(e.g. <code class="highlighter-rouge">style['class-name']</code>) if you intend to use kebab-case.</p>
+
+<p>Example: <code class="highlighter-rouge">foo.css</code></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.root</span> <span class="p">{</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">3rem</span> <span class="m">1rem</span> <span class="m">1rem</span><span class="p">;</span>
+    <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.title</span> <span class="p">{</span>
+    <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.title</span><span class="o">,</span>
+<span class="nc">.greeting</span> <span class="p">{</span>
+    <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">.5rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.spacer</span> <span class="p">{</span>
+    <span class="nl">max-width</span><span class="p">:</span> <span class="m">500px</span><span class="p">;</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="m">#ddd</span><span class="p">;</span>
+    <span class="nl">border-top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">36px</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.label</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#666</span><span class="p">;</span>
+    <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">8px</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Import CSS files as you would a JavaScript module and use dot or bracket notation to access the file name.</p>
+
+<p>Example: <code class="highlighter-rouge">foo.js</code></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">classes</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./foo.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Foo</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="si">{</span><span class="nx">classes</span><span class="p">.</span><span class="nx">root</span><span class="si">}</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">className=</span><span class="si">{</span><span class="nx">classes</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="p">&gt;</span>Foo Component<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">hr</span> <span class="na">className=</span><span class="si">{</span><span class="nx">classes</span><span class="p">.</span><span class="nx">spacer</span><span class="si">}</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">className=</span><span class="si">{</span><span class="nx">classes</span><span class="p">.</span><span class="nx">label</span><span class="si">}</span><span class="p">&gt;</span>A child component with propTypes <span class="ni">&amp;amp;</span> CSS Modules:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Greeting</span> <span class="na">name=</span><span class="s2">"Joe Bloggs"</span> <span class="na">className=</span><span class="si">{</span><span class="nx">classes</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Foo</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="css-modules-in-venia-ui-components">CSS modules in Venia UI components</h2>
+
+<p>Venia UI components let you pass in a <code class="highlighter-rouge">classes</code> prop with a specific <a href="https://reactjs.org/docs/typechecking-with-proptypes.html">prop type shape</a> to override the class names used to render its elements.</p>
+
+<p>Example: <code class="highlighter-rouge">myButtonWrapper.css</code></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.content</span> <span class="p">{</span>
+    <span class="c">/* content class style override */</span>
+<span class="p">}</span>
+
+<span class="nc">.root</span> <span class="p">{</span>
+    <span class="c">/* root class style override */</span>
+<span class="p">}</span>
+
+<span class="nc">.root_highPriority</span> <span class="p">{</span>
+    <span class="c">/* root_highPriority class style override */</span>
+<span class="p">}</span>
+
+<span class="nc">.root_lowPriority</span> <span class="p">{</span>
+    <span class="c">/* root_lowPriority class style override */</span>
+<span class="p">}</span>
+
+<span class="nc">.root_normalPriority</span> <span class="p">{</span>
+    <span class="c">/* root_normalPriority class style override */</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>With the CSS modules feature, you can import a CSS file as an object and pass it in as a prop to Venia UI components.
+This lets you override the style for the specific classes the component expects.
+To find out what classes you can override on a component, see the reference documentation or prop type in the source code.</p>
+
+<p>For example, Venia’s <a href="https://github.com/magento/pwa-studio/blob/develop/packages/venia-ui/lib/components/Button/button.js">Button</a> component lets you override the classes specified in the <code class="highlighter-rouge">myButtonWrapper.css</code> exampe file.</p>
+
+<p>Example: <code class="highlighter-rouge">myButtonWrapper.js</code></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">Button</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@magento/venia-ui/lib/components/Button</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">buttonOverrides</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./myButtonWrapper.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">MyButtonWrapper</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nc">Button</span> <span class="na">classes=</span><span class="si">{</span><span class="nx">buttonOverrides</span><span class="si">}</span> <span class="err">{</span><span class="p">...</span><span class="nt">props</span><span class="err">}</span> <span class="p">/&gt;;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">MyButtonWrapper</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>This example defines a component that wraps around Venia’s Button component and provides its own set of custom classes to override the default Button classes.</p>
+
+<h3 id="adding-the-class-name-override-feature">Adding the class name override feature</h3>
+
+<p>The Venia UI library uses the <code class="highlighter-rouge">mergeClasses()</code> utility function in its <code class="highlighter-rouge">classify</code> module to add classname override functionality to its components.
+Use this function to add this same feature to your own custom components.</p>
+
+<p>Example: <code class="highlighter-rouge">foo.js</code></p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  import React from 'react';
+<span class="gi">+ import { mergeClasses } from '@magento/venia-ui/lib/classify';
+</span>  
+<span class="gd">- import classes from './foo.css';
+</span><span class="gi">+ import defaultClasses from './foo.css';
+</span>  
+  const Foo = props =&gt; {
+<span class="gi">+     const { classes: propClasses } = props;
++
++     const classes = mergeClasses(defaultClasses, propClasses);
++
+</span>      return (
+      &lt;div className={classes.root}&gt;
+          &lt;h1 className={classes.title}&gt;Foo Component&lt;/h1&gt;
+          &lt;hr className={classes.spacer} /&gt;
+          &lt;p className={classes.label}&gt;A child component with propTypes &amp;amp; CSS Modules:&lt;/p&gt;
+          &lt;Greeting name="Joe Bloggs" className={classes.title} /&gt;
+      &lt;/div&gt;
+      );
+  }
+  
+  export default Foo;
+</code></pre></div></div>
+
+
+			</main>
+			<footer class="content-footer">
+				
+
+			</footer>
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="http://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+  <li><a href="http://magento.com/legal/terms/">Terms of Service</a></li>
+  <li><a href="http://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+  <li><a href="https://magentocommeng.slack.com/messages/C71HNKYS2">#pwa Slack channel</a></li>
+</ul>
+    </div>
+
+		<div class="copyright-date">&copy; 2020 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/pwa-studio/assets/js/app.min.js?ver=9"></script>
+<script src="/pwa-studio/assets/js/editions.min.js?ver=9"></script>
+<script src="/pwa-studio/assets/js/page-updated.min.js?ver=9"></script>
+
+<script src="/pwa-studio/builds/js/index.bundle.js"></script>
+
+</body>
+</html>
+

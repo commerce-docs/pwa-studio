@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr" class="spectrum spectrum--medium spectrum--lightest">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Adding React | Magento PWA Documentation</title>
+	<meta name="description" content="Everything you need to build a Magento PWA.">
+
+	<link rel="stylesheet" href="https://use.typekit.net/iaw1apr.css">
+	<link rel="stylesheet" href="/pwa-studio/assets/css/app.css?ver=9" />
+	<link rel="stylesheet" href="/pwa-studio/assets/css/print.css?ver=9" media="print"/>
+
+	<link rel="stylesheet" href="/pwa-studio/builds/css/main.css" />
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script>
+  var baseUrl = "/pwa-studio";
+  var algolia = {
+    id : "E642SEDTHL",
+    index: "pwa-devdocs",
+    key: "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+
+  var indices = [
+    {
+      label: "PWA",
+      name: "pwa-devdocs",
+      baseUrl: "https://pwastudio.io"
+    },
+    {
+      label: "DevDocs",
+      name: "devdocs",
+      facets: [["guide_version: 2.3", "versionless: true"]],
+      refinements: [
+        {
+          label: "Functional areas",
+          attribute: "functional_areas"
+        }
+      ],
+      baseUrl: "https://devdocs.magento.com"
+    },
+    {
+      label: "Commerce User Guide",
+      name: "merchdocs",
+      baseUrl: "https://docs.magento.com/user-guide"
+    },
+    {
+      label: "MBI User Guide",
+      name: "merchdocs-mbi",
+      baseUrl: "https://docs.magento.com/mbi"
+    },
+    {
+      label: "Order Management",
+      name: "oms-en",
+      baseUrl: "https://omsdocs.magento.com"
+    }
+  ];
+</script>
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KRCLXBB');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" data-proofer-ignore href="/pwa-studio/">
+      <img class="logo-image" src="/pwa-studio/assets/i/adobe-a.svg" alt="Adobe">
+      <span class="logo-text">Magento</span>
+      <span class="site-logo">PWA Docs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      <!-- Main Navigation -->
+<ul class="nav-main spectrum-Tabs spectrum-Tabs--horizontal" role="menubar">
+
+  
+  <li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Getting Started</span>
+    <div class="nav-popup spectrum-Popover">
+      <ul class="spectrum-Menu">
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/overview/">Overview</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/frequently-asked-questions/">Frequently Asked Questions</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/storefront-architecture/">Storefront architecture</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/basic-concepts/">Basic concepts</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/pwa-buildpack/">PWA Buildpack</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/peregrine/">Peregrine</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/venia-pwa-concept/">Venia storefront concept</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/upward/">UPWARD</a>
+        </li> 
+        
+      </ul>
+    </div>
+  </li>
+
+  
+
+  
+  <li class="menuitem spectrum-Tabs-item is-selected">
+    <a class="spectrum-Tabs-itemLabel" href="/pwa-studio/tutorials/">Tutorials</a>
+  </li>
+  
+
+  
+  <li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Reference API</span>
+    <div class="nav-popup spectrum-Popover">
+      <ul class="spectrum-Menu">
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/pwa-buildpack/reference/buildpack-cli/">PWA Buildpack</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/peregrine/reference/item/">Peregrine API</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/venia-ui/reference/components/Button/">Venia UI API</a>
+        </li> 
+        
+      </ul>
+    </div>
+  </li>
+
+  
+
+  
+  <li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Integrations</span>
+    <div class="nav-popup spectrum-Popover">
+      <ul class="spectrum-Menu">
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/pagebuilder/">Page Builder</a>
+        </li> 
+        
+      </ul>
+    </div>
+  </li>
+
+  
+
+</ul>
+
+    </div>
+
+    <div class="nav-actions">
+        
+        
+
+
+        
+<div class="app-switcher">
+  <div class="dropdown">
+    <button id="app-switcher-trigger" class="app-switcher-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Documentation sites"></button>
+    <div class="dropdown-menu spectrum-Popover spectrum-Dropdown-popover spectrum-Popover--bottom dropdown-menu-right" aria-labelledby="app-switcher-trigger" role="menu">
+      <div class="app-switcher-content">
+      
+      <div class="app-switcher-group">
+        <span class="spectrum-Menu-sectionHeading" id="app-switcher-category-1">Developer</span>
+        <ul class="spectrum-Menu" role="group" aria-labelledby="app-switcher-category-1">
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://devdocs.magento.com/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce Developer Documentation">Commerce Developer Documentation</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="http://pwastudio.io/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=PWA Studio">PWA Studio</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://omsdocs.magento.com/en/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        </ul>
+      </div>
+      
+      <div class="app-switcher-group">
+        <span class="spectrum-Menu-sectionHeading" id="app-switcher-category-2">Merchant</span>
+        <ul class="spectrum-Menu" role="group" aria-labelledby="app-switcher-category-2">
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://docs.magento.com/user-guide/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce User Guide">Commerce User Guide</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://omsdocs.magento.com/en/userguides/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://docs.magento.com/mbi/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Business Intelligence">Business Intelligence</a></li>
+        
+        </ul>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="search-btn">
+          <button class="search-trigger" aria-label="Search">
+            <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Edit">
+              <use xlink:href="#spectrum-css-icon-Magnifier" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="quick-search">
+          <form
+  class="spectrum-Search search-form"
+  action="/pwa-studio/search/"
+>
+  <input
+    type="search"
+    placeholder="Looking for something specific?"
+    name="query"
+    value=""
+    class="spectrum-Textfield-input spectrum-Search-input search-field form-control"
+    autocomplete="off"
+  />
+  <svg
+    class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon"
+    focusable="false"
+    aria-hidden="true"
+  >
+    <use xlink:href="#spectrum-css-icon-Magnifier" />
+  </svg>
+  <button type="reset" class="search-clear spectrum-ClearButton spectrum-SearchClearButton">
+    <svg
+      class="spectrum-Icon spectrum-UIIcon-CrossSmall"
+      focusable="false"
+      aria-hidden="true"
+    >
+      <use xlink:href="#spectrum-css-icon-CrossSmall" />
+    </svg>
+  </button>
+</form>
+
+        </div>
+
+    </div>
+
+  </div>
+</nav><!-- .site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+    <button class="toc-toggler">Table of Contents</button>
+    <div class="sidebar-wrapper">
+
+      
+
+
+
+
+
+
+<div class="menu-section">
+    <div class="toc-entry">
+        <h4 class="guide-title">Tutorials</h4>
+    </div>
+
+    <ul class="table-of-contents spectrum-SideNav spectrum-SideNav--multiLevel" >
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/" class="spectrum-SideNav-itemLink  ">Overview</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/cloud-deploy/" class="spectrum-SideNav-itemLink  ">Magento Cloud deployment</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <span class="spectrum-SideNav-heading">Hello UPWARD</span>
+            
+
+            
+            <ul class="spectrum-SideNav">
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/hello-upward/simple-server/" class="spectrum-SideNav-itemLink  ">Creating a simple server</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/hello-upward/using-template-resolver/" class="spectrum-SideNav-itemLink  ">Using the TemplateResolver</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item is-selected">
+                    
+                    <a href="/pwa-studio/tutorials/hello-upward/adding-react/" class="spectrum-SideNav-itemLink  ">Adding React</a>
+                    
+                </li>
+            
+            </ul>
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/create-taglist-component/" class="spectrum-SideNav-itemLink  ">Create a TagList component</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/enable-sass-less-support/" class="spectrum-SideNav-itemLink  ">Enable SASS or LESS support</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/" class="spectrum-SideNav-itemLink  parent">PWA Studio fundamentals</a>
+            
+
+            
+            <ul class="spectrum-SideNav">
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/project-setup/" class="spectrum-SideNav-itemLink  ">Project setup</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/project-structure/" class="spectrum-SideNav-itemLink  ">Project structure</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/add-a-static-route/" class="spectrum-SideNav-itemLink  ">Add a static route</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/modify-site-footer/" class="spectrum-SideNav-itemLink  ">Modify the site footer</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/using-component-props/" class="spectrum-SideNav-itemLink  ">Using component props</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/css-modules/" class="spectrum-SideNav-itemLink  ">CSS modules</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/manage-state/" class="spectrum-SideNav-itemLink  ">Manage state</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/work-with-graphql/" class="spectrum-SideNav-itemLink  ">Work with GraphQL</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/production-launch-checklist/" class="spectrum-SideNav-itemLink  ">Production launch checklist</a>
+                    
+                </li>
+            
+            </ul>
+            
+        </li>
+    
+    </ul>
+</div>
+
+
+
+    </div>
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<header class="content-header">
+				<!-- page-header -->
+<section class="page-intro">
+	
+	<h1 class="page-title">Adding React</h1>
+
+	
+	
+	<div class="github-links spectrum-ButtonGroup"><div class="github-link">
+    <a class="improve-page spectrum-ActionButton spectrum-ActionButton--quiet" href="https://github.com/magento/pwa-studio/tree/develop/pwa-devdocs/src/tutorials/hello-upward/adding-react/index.md" target="_blank">
+      <img class="spectrum-Icon spectrum-Icon--sizeS" src="/pwa-studio/assets/i/icons/edit.svg" alt="" />
+      <span class="spectrum-ActionButton-label">Edit on GitHub</span> 
+    </a>
+  </div><div class="new-issue">
+    <a class="spectrum-ActionButton spectrum-ActionButton--quiet" href="https://github.com/magento/pwa-studio/issues/new?title=Feedback on page: /tutorials/hello-upward/adding-react/" target="_blank">
+      <img class="spectrum-Icon spectrum-Icon--sizeS"  src="/pwa-studio/assets/i/icons/bug.svg" alt="" />
+      <span class="spectrum-ActionButton-label">Log an Issue</span>
+    </a>
+  </div></div>
+
+
+  
+
+
+
+ 
+
+  
+
+</section>
+
+			</header>
+			<main>
+				<p>This tutorial teaches you how to add webpack to your UPWARD project and use it to create a React application.</p>
+
+<p>This tutorial builds on the project described in the previous <a href="/pwa-studio/tutorials/hello-upward/using-template-resolver/">Using the TemplateResolver</a> topic.</p>
+
+<h2 id="install-dependencies">Install dependencies</h2>
+
+<p>Add babel, webpack, and react dependencies to the project:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add @babel/core @babel/preset-env babel-loader webpack webpack-cli @babel/preset-react react react-dom
+</code></pre></div></div>
+
+<p>In addition to installing React, this command installs <a href="https://babeljs.io/">babel</a> configurations and <a href="https://webpack.js.org/">webpack</a>.</p>
+
+<p>In general, React components are written using ES6(<a href="http://www.ecma-international.org/ecma-262/6.0/index.html">ECMAScript 2015</a>) and <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> syntax for the convenience and ease of readability they provide.
+Using <a href="https://babeljs.io/">babel</a> and <a href="https://webpack.js.org/">webpack</a> is a common way to incorporate ES6 and JSX into a React project.</p>
+
+<h2 id="modify-template">Modify template</h2>
+
+<p>Modify the <code class="highlighter-rouge">hello-world.mst</code> template to replace the original message with a “root” DOM node for the React application:</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">{{&gt;</span> templates/open-document}}
+
+  &lt;title&gt;{{ title }}&lt;/title&gt;
+
+  {{&gt; templates/open-body}}
+
+-   &lt;b&gt;Hello Template World!&lt;/b&gt;
+<span class="gi">+   &lt;div id="root"&gt;Loading...&lt;/div&gt;
++
++   &lt;script defer src="/js/app.js"&gt;&lt;/script&gt;
+</span>
+  {{&gt; templates/close-document}}
+</code></pre></div></div>
+
+<p>This update renders a loading message in the root DOM and executes the <code class="highlighter-rouge">app.js</code> script after the browser parses the HTML document.</p>
+
+<h2 id="create-webpack-config">Create webpack config</h2>
+
+<p>Create a <code class="highlighter-rouge">webpack.config.js</code> file to configure webpack behavior:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">development</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">entry</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/hello-world.js</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app.js</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">dist</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">},</span>
+    <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">rules</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">js$/</span><span class="p">,</span>
+                <span class="na">exclude</span><span class="p">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+                <span class="na">loader</span><span class="p">:</span> <span class="dl">'</span><span class="s1">babel-loader</span><span class="dl">'</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>This configuration file tells webpack to transpile all JavaScript files using babel and bundle <code class="highlighter-rouge">src/hello-world.js</code> with its dependencies into <code class="highlighter-rouge">dist/app.js</code>.</p>
+
+<h2 id="create-babel-config">Create babel config</h2>
+
+<p>Create a <code class="highlighter-rouge">.babelrc</code> file to configure babel:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "presets": ["@babel/preset-env","@babel/preset-react"]
+}
+</code></pre></div></div>
+
+<p>This configuration file tells babel what presets to use during JavaScript transpilation.
+The presets used in this example, <code class="highlighter-rouge">@babel/preset-env</code> and <code class="highlighter-rouge">@babel/preset-react</code>, are common React development presets.</p>
+
+<h2 id="create-the-react-application">Create the React application</h2>
+
+<p>Create a <code class="highlighter-rouge">src</code> directory in your project’s root directory and a <code class="highlighter-rouge">hello-world.js</code> file inside that directory with the following content:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-dom</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello React World!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(&lt;</span><span class="nc">App</span> <span class="p">/&gt;,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">));</span>
+</code></pre></div></div>
+
+<p>This file defines an <code class="highlighter-rouge">App</code> React component that returns a “Hello React World!” message wrapped inside <code class="highlighter-rouge">h1</code> tags.
+It uses the <code class="highlighter-rouge">ReactDOM</code> module to inject the content of the application into the “root” DOM element in the document.</p>
+
+<h2 id="make-the-application-script-publicly-available">Make the application script publicly available</h2>
+
+<p>Edit the <code class="highlighter-rouge">spec.yml</code> file to add a new URL pattern to check in the ConditionalResolver and a new <code class="highlighter-rouge">appScript</code> object.</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">...</span>
+
+<span class="p">response:
+</span>    resolver: conditional
+    when:
+        - matches: request.url.pathname
+          pattern: '^/?$'
+          use: helloWorld
+        - matches: request.url.pathname
+          pattern: '^/hello-world/?$'
+          use: helloWorld
+<span class="gi">+       - matches: request.url.pathname
++         pattern: '^/js/app.js'
++         use: appScript
+</span>    default: notFound
+
+helloWorld:
+<span class="err">...</span>
+
+<span class="p">notFound:
+</span><span class="err">...</span>
+
+<span class="gi">+ appScript:
++     inline:
++         status:
++             resolver: inline
++             inline: 200
++         headers:
++             resolver: inline
++             inline:
++                 content-type:
++                     resolver: inline
++                     inline: 'application/javascript'
++         body:
++             resolver: file
++             file:
++                 resolver: inline
++                 inline: './dist/app.js'
++             encoding:
++                 resolver: inline
++                 inline: 'utf-8'
+</span></code></pre></div></div>
+
+<p>This update uses a <a href="https://github.com/magento/pwa-studio/tree/develop/packages/upward-spec#fileresolver">FileResolver</a> which instructs the UPWARD server to respond with the contents of <code class="highlighter-rouge">dist/app.js</code> when there is a request for the <code class="highlighter-rouge">js/app.js</code> path.</p>
+
+<h2 id="create-the-bundle-and-start-the-server">Create the bundle and start the server</h2>
+
+<p>Create the <code class="highlighter-rouge">dist/app.js</code> bundle from <code class="highlighter-rouge">src/hello-world.js</code> and start the UPWARD server:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npx webpack <span class="o">&amp;&amp;</span> node server.js
+</code></pre></div></div>
+
+<p>When webpack bundles <code class="highlighter-rouge">src/hello-world.js</code> into <code class="highlighter-rouge">dist/app.js</code>, it includes its dependencies, such as React and ReactDOM.</p>
+
+<p>When you navigate to the server, you will see the React application render the “Hello React World!” message using the App component.</p>
+
+
+			</main>
+			<footer class="content-footer">
+				
+
+			</footer>
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="http://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+  <li><a href="http://magento.com/legal/terms/">Terms of Service</a></li>
+  <li><a href="http://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+  <li><a href="https://magentocommeng.slack.com/messages/C71HNKYS2">#pwa Slack channel</a></li>
+</ul>
+    </div>
+
+		<div class="copyright-date">&copy; 2020 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/pwa-studio/assets/js/app.min.js?ver=9"></script>
+<script src="/pwa-studio/assets/js/editions.min.js?ver=9"></script>
+<script src="/pwa-studio/assets/js/page-updated.min.js?ver=9"></script>
+
+<script src="/pwa-studio/builds/js/index.bundle.js"></script>
+
+</body>
+</html>
+

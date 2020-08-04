@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr" class="spectrum spectrum--medium spectrum--lightest">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Work with GraphQL | Magento PWA Documentation</title>
+	<meta name="description" content="Everything you need to build a Magento PWA.">
+
+	<link rel="stylesheet" href="https://use.typekit.net/iaw1apr.css">
+	<link rel="stylesheet" href="/pwa-studio/assets/css/app.css?ver=9" />
+	<link rel="stylesheet" href="/pwa-studio/assets/css/print.css?ver=9" media="print"/>
+
+	<link rel="stylesheet" href="/pwa-studio/builds/css/main.css" />
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script>
+  var baseUrl = "/pwa-studio";
+  var algolia = {
+    id : "E642SEDTHL",
+    index: "pwa-devdocs",
+    key: "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+
+  var indices = [
+    {
+      label: "PWA",
+      name: "pwa-devdocs",
+      baseUrl: "https://pwastudio.io"
+    },
+    {
+      label: "DevDocs",
+      name: "devdocs",
+      facets: [["guide_version: 2.3", "versionless: true"]],
+      refinements: [
+        {
+          label: "Functional areas",
+          attribute: "functional_areas"
+        }
+      ],
+      baseUrl: "https://devdocs.magento.com"
+    },
+    {
+      label: "Commerce User Guide",
+      name: "merchdocs",
+      baseUrl: "https://docs.magento.com/user-guide"
+    },
+    {
+      label: "MBI User Guide",
+      name: "merchdocs-mbi",
+      baseUrl: "https://docs.magento.com/mbi"
+    },
+    {
+      label: "Order Management",
+      name: "oms-en",
+      baseUrl: "https://omsdocs.magento.com"
+    }
+  ];
+</script>
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KRCLXBB');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" data-proofer-ignore href="/pwa-studio/">
+      <img class="logo-image" src="/pwa-studio/assets/i/adobe-a.svg" alt="Adobe">
+      <span class="logo-text">Magento</span>
+      <span class="site-logo">PWA Docs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      <!-- Main Navigation -->
+<ul class="nav-main spectrum-Tabs spectrum-Tabs--horizontal" role="menubar">
+
+  
+  <li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Getting Started</span>
+    <div class="nav-popup spectrum-Popover">
+      <ul class="spectrum-Menu">
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/overview/">Overview</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/frequently-asked-questions/">Frequently Asked Questions</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/storefront-architecture/">Storefront architecture</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/basic-concepts/">Basic concepts</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/pwa-buildpack/">PWA Buildpack</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/peregrine/">Peregrine</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/venia-pwa-concept/">Venia storefront concept</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/technologies/upward/">UPWARD</a>
+        </li> 
+        
+      </ul>
+    </div>
+  </li>
+
+  
+
+  
+  <li class="menuitem spectrum-Tabs-item is-selected">
+    <a class="spectrum-Tabs-itemLabel" href="/pwa-studio/tutorials/">Tutorials</a>
+  </li>
+  
+
+  
+  <li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Reference API</span>
+    <div class="nav-popup spectrum-Popover">
+      <ul class="spectrum-Menu">
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/pwa-buildpack/reference/buildpack-cli/">PWA Buildpack</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/peregrine/reference/item/">Peregrine API</a>
+        </li> 
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/venia-ui/reference/components/Button/">Venia UI API</a>
+        </li> 
+        
+      </ul>
+    </div>
+  </li>
+
+  
+
+  
+  <li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Integrations</span>
+    <div class="nav-popup spectrum-Popover">
+      <ul class="spectrum-Menu">
+        
+        <li class="spectrum-Menu-item" role="menuitem">
+          <a class="spectrum-Menu-itemLabel" href="/pwa-studio/pagebuilder/">Page Builder</a>
+        </li> 
+        
+      </ul>
+    </div>
+  </li>
+
+  
+
+</ul>
+
+    </div>
+
+    <div class="nav-actions">
+        
+        
+
+
+        
+<div class="app-switcher">
+  <div class="dropdown">
+    <button id="app-switcher-trigger" class="app-switcher-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Documentation sites"></button>
+    <div class="dropdown-menu spectrum-Popover spectrum-Dropdown-popover spectrum-Popover--bottom dropdown-menu-right" aria-labelledby="app-switcher-trigger" role="menu">
+      <div class="app-switcher-content">
+      
+      <div class="app-switcher-group">
+        <span class="spectrum-Menu-sectionHeading" id="app-switcher-category-1">Developer</span>
+        <ul class="spectrum-Menu" role="group" aria-labelledby="app-switcher-category-1">
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://devdocs.magento.com/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce Developer Documentation">Commerce Developer Documentation</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="http://pwastudio.io/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=PWA Studio">PWA Studio</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://omsdocs.magento.com/en/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        </ul>
+      </div>
+      
+      <div class="app-switcher-group">
+        <span class="spectrum-Menu-sectionHeading" id="app-switcher-category-2">Merchant</span>
+        <ul class="spectrum-Menu" role="group" aria-labelledby="app-switcher-category-2">
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://docs.magento.com/user-guide/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce User Guide">Commerce User Guide</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://omsdocs.magento.com/en/userguides/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        <li class="spectrum-Menu-item" role="menuitem"><a class="spectrum-Menu-itemLabel" href="https://docs.magento.com/mbi/?itm_source=pwa-devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Business Intelligence">Business Intelligence</a></li>
+        
+        </ul>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="search-btn">
+          <button class="search-trigger" aria-label="Search">
+            <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Edit">
+              <use xlink:href="#spectrum-css-icon-Magnifier" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="quick-search">
+          <form
+  class="spectrum-Search search-form"
+  action="/pwa-studio/search/"
+>
+  <input
+    type="search"
+    placeholder="Looking for something specific?"
+    name="query"
+    value=""
+    class="spectrum-Textfield-input spectrum-Search-input search-field form-control"
+    autocomplete="off"
+  />
+  <svg
+    class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon"
+    focusable="false"
+    aria-hidden="true"
+  >
+    <use xlink:href="#spectrum-css-icon-Magnifier" />
+  </svg>
+  <button type="reset" class="search-clear spectrum-ClearButton spectrum-SearchClearButton">
+    <svg
+      class="spectrum-Icon spectrum-UIIcon-CrossSmall"
+      focusable="false"
+      aria-hidden="true"
+    >
+      <use xlink:href="#spectrum-css-icon-CrossSmall" />
+    </svg>
+  </button>
+</form>
+
+        </div>
+
+    </div>
+
+  </div>
+</nav><!-- .site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+    <button class="toc-toggler">Table of Contents</button>
+    <div class="sidebar-wrapper">
+
+      
+
+
+
+
+
+
+<div class="menu-section">
+    <div class="toc-entry">
+        <h4 class="guide-title">Tutorials</h4>
+    </div>
+
+    <ul class="table-of-contents spectrum-SideNav spectrum-SideNav--multiLevel" >
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/" class="spectrum-SideNav-itemLink  ">Overview</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/cloud-deploy/" class="spectrum-SideNav-itemLink  ">Magento Cloud deployment</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <span class="spectrum-SideNav-heading">Hello UPWARD</span>
+            
+
+            
+            <ul class="spectrum-SideNav">
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/hello-upward/simple-server/" class="spectrum-SideNav-itemLink  ">Creating a simple server</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/hello-upward/using-template-resolver/" class="spectrum-SideNav-itemLink  ">Using the TemplateResolver</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/hello-upward/adding-react/" class="spectrum-SideNav-itemLink  ">Adding React</a>
+                    
+                </li>
+            
+            </ul>
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/create-taglist-component/" class="spectrum-SideNav-itemLink  ">Create a TagList component</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/enable-sass-less-support/" class="spectrum-SideNav-itemLink  ">Enable SASS or LESS support</a>
+            
+
+            
+        </li>
+    
+        <li class="spectrum-SideNav-item ">
+            
+            <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/" class="spectrum-SideNav-itemLink  parent">PWA Studio fundamentals</a>
+            
+
+            
+            <ul class="spectrum-SideNav">
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/project-setup/" class="spectrum-SideNav-itemLink  ">Project setup</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/project-structure/" class="spectrum-SideNav-itemLink  ">Project structure</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/add-a-static-route/" class="spectrum-SideNav-itemLink  ">Add a static route</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/modify-site-footer/" class="spectrum-SideNav-itemLink  ">Modify the site footer</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/using-component-props/" class="spectrum-SideNav-itemLink  ">Using component props</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/css-modules/" class="spectrum-SideNav-itemLink  ">CSS modules</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/manage-state/" class="spectrum-SideNav-itemLink  ">Manage state</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item is-selected">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/work-with-graphql/" class="spectrum-SideNav-itemLink  ">Work with GraphQL</a>
+                    
+                </li>
+            
+                <li class="spectrum-SideNav-item ">
+                    
+                    <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/production-launch-checklist/" class="spectrum-SideNav-itemLink  ">Production launch checklist</a>
+                    
+                </li>
+            
+            </ul>
+            
+        </li>
+    
+    </ul>
+</div>
+
+
+
+    </div>
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<header class="content-header">
+				<!-- page-header -->
+<section class="page-intro">
+	
+	<h1 class="page-title">Work with GraphQL</h1>
+
+	
+	
+	<div class="github-links spectrum-ButtonGroup"><div class="github-link">
+    <a class="improve-page spectrum-ActionButton spectrum-ActionButton--quiet" href="https://github.com/magento/pwa-studio/tree/develop/pwa-devdocs/src/tutorials/pwa-studio-fundamentals/work-with-graphql/index.md" target="_blank">
+      <img class="spectrum-Icon spectrum-Icon--sizeS" src="/pwa-studio/assets/i/icons/edit.svg" alt="" />
+      <span class="spectrum-ActionButton-label">Edit on GitHub</span> 
+    </a>
+  </div><div class="new-issue">
+    <a class="spectrum-ActionButton spectrum-ActionButton--quiet" href="https://github.com/magento/pwa-studio/issues/new?title=Feedback on page: /tutorials/pwa-studio-fundamentals/work-with-graphql/" target="_blank">
+      <img class="spectrum-Icon spectrum-Icon--sizeS"  src="/pwa-studio/assets/i/icons/bug.svg" alt="" />
+      <span class="spectrum-ActionButton-label">Log an Issue</span>
+    </a>
+  </div></div>
+
+
+  
+
+
+
+ 
+
+  
+
+</section>
+
+			</header>
+			<main>
+				<p>PWA Studio storefronts use Magento’s GraphQL endpoint to fetch data for its components.
+In this tutorial, you will use a <a href="https://devdocs.magento.com/guides/v2.3/graphql/queries/directory-countries.html">countries</a> and <a href="https://devdocs.magento.com/guides/v2.3/graphql/queries/directory-country.html">country</a> query to create two storefront pages that contain information from Magento.</p>
+
+<p>By the end of this tutorial, you will know how to create a GraphQL query and use it to fetch data from the Magento backend and render that data on a page.</p>
+
+<p>For more information about Magento GraphQL, see the <a href="https://devdocs.magento.com/guides/v2.3/graphql/">Magento GraphQL Developer Guide</a>.</p>
+
+<p class="bs-callout bs-callout-info">This tutorial requires you to have a project set up using the steps provided in the <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/project-setup/">Project Setup</a> tutorial.</p>
+
+<h2 id="create-page-component-directory">Create page component directory</h2>
+
+<p>Create both <code class="highlighter-rouge">Countries</code> and <code class="highlighter-rouge">Country</code> directories under your project’s <code class="highlighter-rouge">src/components</code> directory.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> src/components/Countries <span class="o">&amp;&amp;</span>
+<span class="nb">mkdir</span> <span class="nt">-p</span> src/components/Country
+</code></pre></div></div>
+
+<p>These directories will hold the source files for each component.</p>
+
+<h2 id="create-the-queries">Create the queries</h2>
+
+<p>The PWA Studio convention for GraphQL query files is to define and export them in JavaScript files inside component directories.</p>
+
+<h3 id="request-data-for-supported-countries">Request data for supported countries</h3>
+
+<p>Create a <code class="highlighter-rouge">countries.gql.js</code> file under <code class="highlighter-rouge">src/components/Countries</code> with the following content:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">gql</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">graphql-tag</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">GET_COUNTRIES_QUERY</span> <span class="o">=</span> <span class="nx">gql</span><span class="s2">`
+    query GetCountries {
+        countries {
+            id
+            full_name_english
+        }
+    }
+`</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="na">queries</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">getCountriesQuery</span><span class="p">:</span> <span class="nx">GET_COUNTRIES_QUERY</span>
+    <span class="p">},</span>
+    <span class="na">mutations</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>This file exports a query that requests the ID and name of countries from the Magento backend.</p>
+
+<h3 id="request-country-data">Request country data</h3>
+
+<p>Create a <code class="highlighter-rouge">country.gql.js</code> file under <code class="highlighter-rouge">src/components/Country</code> with the following content:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">gql</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">graphql-tag</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">GET_COUNTRY_QUERY</span> <span class="o">=</span> <span class="nx">gql</span><span class="s2">`
+    query GetCountry($id: String) {
+        country(id: $id) {
+            id
+            full_name_english
+            available_regions {
+                id
+                name
+            }
+        }
+    }
+`</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="na">queries</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">getCountryQuery</span><span class="p">:</span> <span class="nx">GET_COUNTRY_QUERY</span>
+    <span class="p">},</span>
+    <span class="na">mutations</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>This file exports a dynamic request that uses a query variable to get data for a country with a specific <code class="highlighter-rouge">id</code>.</p>
+
+<h2 id="graphql-playground">GraphQL Playground</h2>
+
+<p>Use the GraphQL Playground tool that comes with PWA Studio to test and validate your queries.
+This tool connects to the same Magento backend as your storefront, so it returns the same data.</p>
+
+<p>GraphQL Playground is available in the development server, so run your storefront in develop mode using <code class="highlighter-rouge">yarn watch</code>.
+After the server starts, the command line lists the URL for the storefront and the GraphQL Playground.</p>
+
+<p>Copy and paste the GraphQL Playground link in your browser to access the tool.</p>
+
+<h3 id="verify-queries">Verify queries</h3>
+
+<p>Clear any existing queries in the left pane and paste the query for the list of countries.
+When you run the query, the right pane will show the list of countries from Magento.</p>
+
+<p>Clear the left pane and paste the query for a specific country.
+Since this is a dynamic request, you need to provide a specific value for the country <code class="highlighter-rouge">id</code>.</p>
+
+<p>Open the <strong>Query Variables</strong> pane on the bottom left and paste the following content:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"US"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>GraphQL Playground uses the data in this pane to populate the query variables expected by the query.
+Now, when you run the query, the right pane will show the country data stored in Magento for the United States.</p>
+
+<h2 id="create-components">Create components</h2>
+
+<p>In this part of the tutorial, you will create the React components that uses these queries and renders their data.</p>
+
+<h3 id="countries">Countries</h3>
+
+<p>Under <code class="highlighter-rouge">src/component/Countries</code>, create a <code class="highlighter-rouge">countries.js</code> file with the following content:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useQuery</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@apollo/react-hooks</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Link</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@magento/venia-drivers</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">path</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">countriesOperations</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./countries.gql</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Countries</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// Scroll to the top on component load</span>
+    <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="p">},</span> <span class="p">[]);</span>
+
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">queries</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">countriesOperations</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">getCountriesQuery</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">queries</span><span class="p">;</span>
+
+    <span class="c1">// Fetch the data using apollo react hooks</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">loading</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useQuery</span><span class="p">(</span><span class="nx">getCountriesQuery</span><span class="p">);</span>
+
+    <span class="c1">// Loading and error states can detected using values returned from</span>
+    <span class="c1">// the useQuery hook</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">loading</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Default content rendered while the query is running</span>
+        <span class="k">return</span> <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Loading...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// NOTE: This is only meant to show WHERE you can handle</span>
+        <span class="c1">// GraphQL errors. Not HOW you should handle it.</span>
+        <span class="k">return</span> <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Error!<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;;</span>
+    <span class="p">}</span>
+
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">countries</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+
+    <span class="kd">const</span> <span class="nx">listItems</span> <span class="o">=</span> <span class="nx">countries</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">country</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="p">{</span> <span class="nx">id</span><span class="p">,</span> <span class="na">full_name_english</span><span class="p">:</span> <span class="nx">name</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">country</span><span class="p">;</span>
+
+        <span class="kd">const</span> <span class="nx">linkTo</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">country</span><span class="dl">'</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">li</span> <span class="na">key=</span><span class="si">{</span><span class="nx">id</span><span class="si">}</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nc">Link</span> <span class="na">to=</span><span class="si">{</span><span class="nx">linkTo</span><span class="si">}</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nc">Link</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">listItems</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;;</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Countries</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>This file defines a component that creates a list of countries where the backend Magento store does business.
+Each country listed is a link that points to a page for that country.</p>
+
+<p>In the code, the component imports and destructures the GraphQL query from the <code class="highlighter-rouge">countries.gql.js</code> file and makes a request using <code class="highlighter-rouge">useQuery()</code> from the <code class="highlighter-rouge">@apollo/react-hooks</code> library.</p>
+
+<p>Next, create an <code class="highlighter-rouge">index.js</code> file under <code class="highlighter-rouge">src/components/Countries</code>.
+Add the following content to export the Countries component from the directory.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/components/Countries/index.js</span>
+
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./countries</span><span class="dl">'</span>
+</code></pre></div></div>
+
+<h3 id="country">Country</h3>
+
+<p>Under <code class="highlighter-rouge">src/components/Country</code>, create a <code class="highlighter-rouge">country.js</code> file with the following content:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useQuery</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@apollo/react-hooks</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useParams</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@magento/venia-ui/lib/drivers</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">countryOperations</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./country.gql</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">Regions</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./regions</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Country</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// Scroll to the top on page load</span>
+    <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="p">},</span> <span class="p">[]);</span>
+
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">id</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useParams</span><span class="p">();</span>
+
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">queries</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">countryOperations</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">getCountryQuery</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">queries</span><span class="p">;</span>
+
+    <span class="c1">// Fetch the data using apollo react hooks</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">loading</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useQuery</span><span class="p">(</span><span class="nx">getCountryQuery</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">variables</span><span class="p">:</span> <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="nx">id</span> <span class="p">}</span>
+    <span class="p">});</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">loading</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Loading...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// NOTE: This is only meant to show WHERE you can handle</span>
+        <span class="c1">// GraphQL errors. Not HOW you should handle it.</span>
+        <span class="k">return</span> <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Error!<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;;</span>
+    <span class="p">}</span>
+
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">country</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+
+    <span class="kd">const</span> <span class="p">{</span> <span class="na">full_name_english</span><span class="p">:</span> <span class="nx">name</span><span class="p">,</span> <span class="na">available_regions</span><span class="p">:</span> <span class="nx">regions</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">country</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nc">Regions</span> <span class="na">regions=</span><span class="si">{</span><span class="nx">regions</span><span class="si">}</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Country</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Under the same directory, create a <code class="highlighter-rouge">regions.js</code> file with the following content:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Regions</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">regions</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">regions</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">listItems</span> <span class="o">=</span> <span class="nx">regions</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">region</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="kd">const</span> <span class="p">{</span> <span class="nx">name</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">region</span><span class="p">;</span>
+            <span class="k">return</span> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">key=</span><span class="si">{</span><span class="nx">name</span><span class="si">}</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;;</span>
+        <span class="p">});</span>
+
+        <span class="k">return</span> <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">listItems</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Regions</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>These files define components that render information about a specific country.</p>
+
+<p>The component gets the country ID from the URL using the <a href="https://reacttraining.com/react-router/web/api/Hooks/useparams"><code class="highlighter-rouge">useParams()</code></a> hook.
+Similar to the <strong>Countries</strong> component, the <strong>Country</strong> component imports the GraphQL query and uses the <code class="highlighter-rouge">useQuery()</code> function and the country ID to get the data for a specific country.</p>
+
+<p>The Country component also imports a <strong>Region</strong> component, which renders a lists of regions associated with a country.</p>
+
+<p>Next, create an <code class="highlighter-rouge">index.js</code> file under <code class="highlighter-rouge">src/components/Country</code>.
+Add the following content to export the Country component from the directory.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/components/Country/index.js</span>
+
+<span class="k">export</span> <span class="p">{</span> <span class="k">default</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./country</span><span class="dl">'</span>
+</code></pre></div></div>
+
+<h2 id="associate-components-to-routes">Associate components to routes</h2>
+
+<p>Use the steps in the <a href="/pwa-studio/tutorials/pwa-studio-fundamentals/add-a-static-route/">Add a static route</a> tutorial to add the following entries to the Routes component:</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;Suspense fallback={fullPageLoadingIndicator}&gt;
+     &lt;Switch&gt;
+<span class="gi">+        &lt;Route exact path="/countries"&gt;
++            &lt;Countries /&gt;
++        &lt;/Route&gt;
++        &lt;Route path="/country/:id?"&gt;
++            &lt;Country /&gt;
++        &lt;/Route&gt;
+</span>         &lt;Route exact path="/search.html"&gt;
+             &lt;Search /&gt;
+         &lt;/Route&gt;
+         &lt;Route exact path="/create-account"&gt;
+             &lt;CreateAccountPage /&gt;
+         &lt;/Route&gt;
+         &lt;Route&gt;
+             &lt;MagentoRoute /&gt;
+         &lt;/Route&gt;
+     &lt;/Switch&gt;
+ &lt;/Suspense&gt;
+</code></pre></div></div>
+
+<p>This update associates the Countries and Country components with specific routes.
+The pattern used for the country route lets the <code class="highlighter-rouge">useParams()</code> hook get the country ID from the URL.</p>
+
+<h2 id="view-the-components">View the components</h2>
+
+<p>Start the development server using <code class="highlighter-rouge">yarn watch</code> and navigate to <code class="highlighter-rouge">&lt;storefront url&gt;/countries</code> to see a page with the list of countries from Magento.
+Each country is a link which leads to a page rendered by the Country component.</p>
+
+
+			</main>
+			<footer class="content-footer">
+				
+
+			</footer>
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="http://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+  <li><a href="http://magento.com/legal/terms/">Terms of Service</a></li>
+  <li><a href="http://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+  <li><a href="https://magentocommeng.slack.com/messages/C71HNKYS2">#pwa Slack channel</a></li>
+</ul>
+    </div>
+
+		<div class="copyright-date">&copy; 2020 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/pwa-studio/assets/js/app.min.js?ver=9"></script>
+<script src="/pwa-studio/assets/js/editions.min.js?ver=9"></script>
+<script src="/pwa-studio/assets/js/page-updated.min.js?ver=9"></script>
+
+<script src="/pwa-studio/builds/js/index.bundle.js"></script>
+
+</body>
+</html>
+
